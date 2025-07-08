@@ -111,7 +111,35 @@ python3 app.py
 http://localhost:5000
 ```
 
----
+## 🚀 How to Access in Browser (Cloud / NGINX Setup)
+
+If you're running the app on a **remote cloud server** (like Azure VM), and you've configured **NGINX as a reverse proxy**, follow these steps:
+
+1. Make sure Flask app is running:
+
+```bash
+python3 app.py
+````
+
+2. Ensure NGINX is listening on `port 8080` and pointing to Flask's internal port `5000`.
+
+3. In your browser, go to:
+
+```
+http://<your-azure-ip>:8080
+```
+
+✅ You should see the app running with Azure-specific messages.
+
+📌 Example:
+
+```
+http://52.168.107.114:8080
+```
+
+🛡️ Don’t forget to allow **port 8080** in Azure VM's inbound rules via the Azure portal.
+
+```
 
 ## 🤝 Let's Connect
 
